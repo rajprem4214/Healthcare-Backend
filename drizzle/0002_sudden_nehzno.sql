@@ -1,0 +1,1 @@
+ALTER TABLE `user` MODIFY COLUMN `health_id` varchar(20);

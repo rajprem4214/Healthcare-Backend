@@ -1,0 +1,253 @@
+{
+    "info": {
+        "_postman_id": "856f91e0-1bcf-42e3-a6a1-9336180c17c1",
+        "name": "Uwell-core-services",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "auth",
+            "item": [
+                {
+                    "name": "signup",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "https://dev.uwell.tech/backend/api/v1/auth/newPatient",
+                            "path": [
+                                "backend",
+                                "api",
+                                "v1",
+                                "auth",
+                                "newPatient"
+                            ],
+                            "protocol": "https",
+                            "host": [
+                                "dev",
+                                "uwell",
+                                "tech"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"firstname\": \"shikhar\",\n  \"lastname\":\"singh\",\n  \"email\":\"contactme.shikharsingh@gmail.com\",\n  \"password\":\"shikhar@123\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "login",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "https://dev.uwell.tech/backend/api/v1/auth/login",
+                            "path": [
+                                "backend",
+                                "api",
+                                "v1",
+                                "auth",
+                                "login"
+                            ],
+                            "protocol": "https",
+                            "host": [
+                                "dev",
+                                "uwell",
+                                "tech"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"email\": \"contactme.shikharsingh@gmail.com\",\n  \"password\": \"shikhar@123\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "profile Details",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "https://dev.uwell.tech/backend/api/v1/auth/me",
+                            "path": [
+                                "backend",
+                                "api",
+                                "v1",
+                                "auth",
+                                "me"
+                            ],
+                            "protocol": "https",
+                            "host": [
+                                "dev",
+                                "uwell",
+                                "tech"
+                            ]
+                        },
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNvbnRhY3RtZS5zaGlraGFyc2luZ2hAZ21haWwuY29tIiwicm9sZSI6InBhdGllbnQiLCJpYXQiOjE3MDA0ODQ5NjIsImV4cCI6MTcwMDU3MTM2Mn0.ZE3pSuQOa7tNRxiQI9s_EizeFaXpsxxIkH-kdJTx8BA"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "createOtp",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "https://dev.uwell.tech/backend/api/v1/auth/createOtp",
+                            "path": [
+                                "backend",
+                                "api",
+                                "v1",
+                                "auth",
+                                "createOtp"
+                            ],
+                            "protocol": "https",
+                            "host": [
+                                "dev",
+                                "uwell",
+                                "tech"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "verify otp",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "https://dev.uwell.tech/backend/api/v1/auth/verifyOtp",
+                            "path": [
+                                "backend",
+                                "api",
+                                "v1",
+                                "auth",
+                                "verifyOtp"
+                            ],
+                            "protocol": "https",
+                            "host": [
+                                "dev",
+                                "uwell",
+                                "tech"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"otp\": \"123123\",\n  \"token\": \"123123\"\n}"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "patient",
+            "item": [
+                {
+                    "name": "update",
+                    "request": {
+                        "method": "PATCH",
+                        "url": {
+                            "raw": "https://dev.uwell.tech/backend/api/v1/patient/c2b4a0d0-ad0a-4eed-9f12-726028b67843",
+                            "path": [
+                                "backend",
+                                "api",
+                                "v1",
+                                "patient",
+                                "c2b4a0d0-ad0a-4eed-9f12-726028b67843"
+                            ],
+                            "protocol": "https",
+                            "host": [
+                                "dev",
+                                "uwell",
+                                "tech"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"gender\": \"Male\"\n}"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "wallet",
+            "item": [
+                {
+                    "name": "create wallet",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "https://dev.uwell.tech/backend/api/v1/wallet/create",
+                            "path": [
+                                "backend",
+                                "api",
+                                "v1",
+                                "wallet",
+                                "create"
+                            ],
+                            "protocol": "https",
+                            "host": [
+                                "dev",
+                                "uwell",
+                                "tech"
+                            ]
+                        },
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNvbnRhY3RtZS5zaGlraGFyc2luZ2hAZ21haWwuY29tIiwicm9sZSI6InBhdGllbnQiLCJpYXQiOjE3MDA1MDk1MTksImV4cCI6MTcwMDU5NTkxOX0.37sDBqmvUG_iGiqmV0uXTH6A-E5ZszwAW0IGxXW7Pw4"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "healthcheck",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "https://dev.uwell.tech/backend/healthcheck",
+                    "path": [
+                        "backend",
+                        "healthcheck"
+                    ],
+                    "protocol": "https",
+                    "host": [
+                        "dev",
+                        "uwell",
+                        "tech"
+                    ]
+                },
+                "header": [
+                    {
+                        "key": "User-Agent",
+                        "value": "Thunder Client (https://www.thunderclient.com)",
+                        "disabled": true
+                    }
+                ]
+            }
+        }
+    ]
+}
